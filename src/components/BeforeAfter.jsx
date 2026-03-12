@@ -41,12 +41,12 @@ export default function BeforeAfter() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-xs font-semibold tracking-widest text-indigo-600 uppercase mb-4">
+            <p className="text-xs font-semibold tracking-widest text-primary uppercase mb-4">
               India's Leading Resume Specialists
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-6">
               Your career story deserves more than a{" "}
-              <em className="not-italic text-indigo-600">template.</em>
+              <em className="not-italic text-primary">template.</em>
             </h2>
             <p className="text-gray-500 leading-relaxed mb-8">
               Every Naukri resume is handcrafted by a specialist after a personal
@@ -55,7 +55,7 @@ export default function BeforeAfter() {
             </p>
             <a
               href="#"
-              className="inline-block px-6 py-3 rounded-full bg-indigo-600 text-white font-semibold text-sm tracking-wide hover:bg-indigo-700 transition-colors"
+              className="inline-block px-6 py-3 rounded-full bg-primary text-white font-semibold text-sm tracking-wide hover:opacity-90 transition-opacity"
             >
               Begin Your Resume
             </a>
@@ -81,10 +81,10 @@ export default function BeforeAfter() {
                     className="group/feature relative flex flex-col p-6 border-r border-b border-gray-200 cursor-default"
                   >
                     <div className="absolute inset-0 bg-linear-to-t from-slate-100 to-transparent opacity-0 group-hover/feature:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                    <div className="absolute left-0 top-0 w-0.5 h-0 bg-indigo-500 group-hover/feature:h-full transition-all duration-300" />
+                    <div className="absolute left-0 top-0 w-0.5 h-0 bg-primary group-hover/feature:h-full transition-all duration-300" />
 
                     <div className="relative mb-4 flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-50">
-                      <Icon className="w-5 h-5 text-indigo-600" />
+                      <Icon className="w-5 h-5 text-primary" />
                     </div>
 
                     <div className="relative">

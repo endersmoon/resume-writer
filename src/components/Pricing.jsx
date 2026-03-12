@@ -70,7 +70,7 @@ export default function Pricing() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-100 to-transparent opacity-0 group-hover/feature:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
                 {/* Left accent bar */}
-                <div className="absolute left-0 top-0 w-0.5 h-0 bg-indigo-500 group-hover/feature:h-full transition-all duration-300" />
+                <div className="absolute left-0 top-0 w-0.5 h-0 bg-primary group-hover/feature:h-full transition-all duration-300" />
 
                 <div className="relative flex flex-col flex-1">
                   {/* Tier name + range */}
@@ -84,12 +84,12 @@ export default function Pricing() {
                     <p className="text-2xl font-bold text-gray-900 tracking-tight">{tier.price}</p>
                     <p className="text-xs text-gray-400 mt-0.5">
                       <s>{tier.original}</s>
-                      <span className="ml-2 text-indigo-600 font-medium">Save {tier.savings}</span>
+                      <span className="ml-2 text-primary font-medium">Save {tier.savings}</span>
                     </p>
 
                     <a
                       href="#"
-                      className="mt-5 block w-full text-center rounded-lg bg-indigo-600 text-white py-2 text-sm font-semibold hover:bg-indigo-700 transition-colors"
+                      className="mt-5 block w-full text-center rounded-lg bg-primary text-white py-2 text-sm font-semibold hover:opacity-90 transition-opacity"
                     >
                       Get Started
                     </a>

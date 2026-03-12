@@ -65,11 +65,11 @@ export default function HowItWorks() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-100 to-transparent opacity-0 group-hover/feature:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
                   {/* Left accent bar */}
-                  <div className="absolute left-0 top-0 w-0.5 h-0 bg-indigo-500 group-hover/feature:h-full transition-all duration-300" />
+                  <div className="absolute left-0 top-0 w-0.5 h-0 bg-primary group-hover/feature:h-full transition-all duration-300" />
 
                   {/* Icon */}
                   <div className="relative mb-5 flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-50">
-                    <Icon className="w-6 h-6 text-indigo-600" />
+                    <Icon className="w-6 h-6 text-primary" />
                   </div>
 
                   {/* Text */}

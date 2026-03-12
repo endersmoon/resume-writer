@@ -11,6 +11,7 @@
 }
 
 @theme {
+  --color-primary: #275DF5;
   --animate-marquee: marquee var(--duration, 40s) linear infinite;
   --animate-marquee-reverse: marquee-reverse var(--duration, 40s) linear infinite;
 }
