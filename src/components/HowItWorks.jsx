@@ -47,18 +47,25 @@ export default function HowItWorks() {
 
         {/* Feature grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+          }}
           className="border border-gray-200 rounded-2xl overflow-hidden bg-white"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, i) => {
               const Icon = step.icon;
               return (
-                <div
+                <motion.div
                   key={i}
+                  variants={{
+                    hidden: { opacity: 0, y: 24 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+                  }}
                   className="group/feature relative flex flex-col p-8 border-r border-b border-gray-200 cursor-default"
                 >
                   {/* Gradient overlay on hover */}
@@ -81,7 +88,7 @@ export default function HowItWorks() {
                       {step.description}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

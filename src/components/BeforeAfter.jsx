@@ -66,18 +66,25 @@ export default function BeforeAfter() {
 
           {/* Right column */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+            }}
             className="border border-gray-200 rounded-2xl overflow-hidden bg-white"
           >
             <div className="grid grid-cols-1 sm:grid-cols-2">
               {differentiators.map((item, i) => {
                 const Icon = item.icon;
                 return (
-                  <div
+                  <motion.div
                     key={i}
+                    variants={{
+                      hidden: { opacity: 0, y: 24 },
+                      visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+                    }}
                     className="group/feature relative flex flex-col p-6 border-r border-b border-gray-200 cursor-default"
                   >
                     <div className="absolute inset-0 bg-linear-to-t from-slate-100 to-transparent opacity-0 group-hover/feature:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -95,7 +102,7 @@ export default function BeforeAfter() {
                         {item.description}
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Circle } from "lucide-react";
 import ElegantShape from "./ElegantShape";
+import SparklesText from "./SparklesText";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -50,9 +51,10 @@ export default function Hero() {
                 Not a tool. Not a template.
               </span>
               <br />
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 via-white/90 to-rose-300">
-                A Naukri Resume Expert.
-              </span>
+              <SparklesText
+                text="A Naukri Resume Expert."
+                textClassName="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 via-white/90 to-rose-300"
+              />
             </h1>
           </motion.div>
 
