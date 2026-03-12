@@ -30,16 +30,7 @@ const faqs = [
   },
 ];
 
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: 0.2 + i * 0.08, ease: [0.25, 0.4, 0.25, 1] },
-  }),
-};
-
-function FaqItem({ faq, index, isOpen, onToggle }) {
+function FaqItem({ faq, index, isOpen, onToggle, isLast }) {
   const id = useId();
   const headingId = `faq-heading-${id}`;
   const regionId = `faq-region-${id}`;
@@ -47,30 +38,33 @@ function FaqItem({ faq, index, isOpen, onToggle }) {
   return (
     <motion.div
       custom={index}
-      variants={fadeUpVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-40px" }}
-      className="border-b border-white/10"
+      variants={{
+        hidden: { opacity: 0, y: 24 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+      }}
+      className={`group/feature relative px-6 ${!isLast ? "border-b border-gray-200" : ""}`}
     >
+      {/* Left accent bar */}
+      <div className="absolute left-0 top-0 w-0.5 h-0 bg-primary group-hover/feature:h-full transition-all duration-300" />
+
       <button
         id={headingId}
         aria-expanded={isOpen}
         aria-controls={regionId}
         onClick={onToggle}
-        className="w-full flex items-center justify-between py-5 text-left group cursor-pointer"
+        className="w-full flex items-center justify-between py-5 text-left cursor-pointer"
       >
         <span
-          className={`text-sm sm:text-base font-medium tracking-wide transition-colors duration-200 ${
-            isOpen ? "text-white" : "text-white/60 group-hover:text-white/80"
-          }`}
+          className={`text-sm sm:text-base font-semibold tracking-wide transition-colors duration-200 ${
+            isOpen ? "text-primary" : "text-gray-900 group-hover/feature:translate-x-1"
+          } transition-transform duration-200`}
         >
           {faq.question}
         </span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="ml-4 shrink-0 text-white/40"
+          className={`ml-4 shrink-0 transition-colors duration-200 ${isOpen ? "text-primary" : "text-gray-400"}`}
         >
           <ChevronDown className="h-4 w-4" />
         </motion.span>
@@ -88,7 +82,7 @@ function FaqItem({ faq, index, isOpen, onToggle }) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-sm text-white/40 leading-relaxed font-light">
+            <p className="pb-5 text-sm text-gray-500 leading-relaxed">
               {faq.answer}
             </p>
           </motion.div>
@@ -102,28 +96,48 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="max-w-3xl mx-auto px-6 py-16 sm:py-24">
-      <motion.h2
-        custom={0}
-        variants={fadeUpVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-40px" }}
-        className="text-2xl sm:text-3xl font-bold text-white/90 tracking-tight mb-10"
-      >
-        Frequently asked questions
-      </motion.h2>
+    <section className="bg-slate-50 py-16 sm:py-24 px-4">
+      <div className="max-w-3xl mx-auto">
 
-      <div className="border-t border-white/10">
-        {faqs.map((faq, index) => (
-          <FaqItem
-            key={index}
-            faq={faq}
-            index={index + 1}
-            isOpen={openIndex === index}
-            onToggle={() => setOpenIndex(openIndex === index ? null : index)}
-          />
-        ))}
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+            Frequently asked questions
+          </h2>
+          <p className="mt-3 text-sm text-gray-500">
+            Everything you need to know before getting started.
+          </p>
+        </motion.div>
+
+        {/* Single card container */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
+          }}
+          className="border border-gray-200 rounded-2xl overflow-hidden bg-white"
+        >
+          {faqs.map((faq, index) => (
+            <FaqItem
+              key={index}
+              faq={faq}
+              index={index}
+              isLast={index === faqs.length - 1}
+              isOpen={openIndex === index}
+              onToggle={() => setOpenIndex(openIndex === index ? null : index)}
+            />
+          ))}
+        </motion.div>
+
       </div>
     </section>
   );

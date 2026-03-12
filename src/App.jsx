@@ -4,6 +4,7 @@ import BeforeAfter from "./components/BeforeAfter";
 import HowItWorks from "./components/HowItWorks";
 import Pricing from "./components/Pricing";
 import Faq from "./components/Faq";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Pricing />
       <Testimonials />
       <Faq />
+      <Footer />
     </main>
   );
 }

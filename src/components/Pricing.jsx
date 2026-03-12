@@ -96,7 +96,7 @@ export default function Pricing() {
 
                     <a
                       href="#"
-                      className="mt-5 block w-full text-center rounded-lg bg-primary text-white py-2 text-sm font-semibold hover:opacity-90 transition-opacity"
+                      className="mt-5 block w-full text-center rounded-full bg-primary text-white py-2 text-sm font-semibold hover:opacity-90 transition-opacity"
                     >
                       Get Started
                     </a>
