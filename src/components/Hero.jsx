@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Circle } from "lucide-react";
 import ElegantShape from "./ElegantShape";
 import SparklesText from "./SparklesText";
@@ -18,7 +18,15 @@ export default function Hero() {
       <div className="absolute inset-0 bg-linear-to-br from-indigo-500/5 via-transparent to-rose-500/5 blur-3xl" />
 
       <div className="absolute top-6 left-6 z-20">
-        <img src="/naukri_logo.svg" alt="Naukri" className="h-8 w-auto opacity-90" />
+        <img
+          src="/naukri_logo.svg"
+          alt="Naukri"
+          className="h-8 w-auto opacity-90"
+          fetchPriority="high"
+          decoding="sync"
+          width="120"
+          height="32"
+        />
       </div>
 
       <div className="absolute inset-0 overflow-hidden">
@@ -33,7 +41,7 @@ export default function Hero() {
         <div className="max-w-5xl mx-auto text-center">
 
           {/* Badge */}
-          <motion.div
+          <m.div
             custom={0}
             variants={fadeUpVariants}
             initial="hidden"
@@ -42,10 +50,10 @@ export default function Hero() {
           >
             <Circle className="h-2 w-2 fill-rose-500/80" />
             <span className="text-sm text-white/60 tracking-wide">10+ years · 1,20,000+ resumes · Naukri recruiter data</span>
-          </motion.div>
+          </m.div>
 
           {/* Headline */}
-          <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
+          <m.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
               <span className="bg-clip-text text-transparent bg-linear-to-b from-white to-white/80">
                 Not a tool. Not a template.
@@ -56,24 +64,24 @@ export default function Hero() {
                 textClassName="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 via-white/90 to-rose-300"
               />
             </h1>
-          </motion.div>
+          </m.div>
 
           {/* Subheadline */}
-          <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
+          <m.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
             <p className="text-xl sm:text-lg text-white/70 mb-10 leading-relaxed font-light tracking-wide max-w-xl mx-auto">
               A human who has done this 10,000 times, knows exactly what recruiters on Naukri look for — and spends their entire call making your resume one of them.
             </p>
-          </motion.div>
+          </m.div>
 
           {/* CTA */}
-          <motion.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible">
+          <m.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible">
             <a
               href="#"
               className="inline-block px-6 py-3 rounded-full bg-white text-black font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors"
             >
               Get My Resume Expert →
             </a>
-          </motion.div>
+          </m.div>
 
         </div>
       </div>

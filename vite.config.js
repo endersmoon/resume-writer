@@ -5,8 +5,20 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),tailwindcss()],
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: { "@": path.resolve(__dirname, "src") },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor-react":  ["react", "react-dom"],
+          "vendor-motion": ["framer-motion"],
+          "vendor-lucide": ["lucide-react"],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 300,
   },
 })

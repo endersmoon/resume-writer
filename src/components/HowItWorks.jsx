@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { UserCheck, Phone, FileEdit, RefreshCw } from "lucide-react";
 
 const steps = [
@@ -30,7 +30,7 @@ export default function HowItWorks() {
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -43,10 +43,10 @@ export default function HowItWorks() {
           <p className="mt-3 text-sm text-gray-500">
             Only Naukri Expert writers see what recruiters see. ATS. AI filters. Human eyes. In that order.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Feature grid */}
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -60,7 +60,7 @@ export default function HowItWorks() {
             {steps.map((step, i) => {
               const Icon = step.icon;
               return (
-                <motion.div
+                <m.div
                   key={i}
                   variants={{
                     hidden: { opacity: 0, y: 24 },
@@ -88,11 +88,11 @@ export default function HowItWorks() {
                       {step.description}
                     </p>
                   </div>
-                </motion.div>
+                </m.div>
               );
             })}
           </div>
-        </motion.div>
+        </m.div>
 
       </div>
     </section>

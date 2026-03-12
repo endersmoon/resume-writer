@@ -10,6 +10,22 @@
   to   { transform: translateX(0); }
 }
 
+@keyframes sparkle-pop {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(75deg); }
+  40%       { opacity: 1; transform: scale(var(--sparkle-scale, 1)) rotate(120deg); }
+  80%       { opacity: 0; transform: scale(0) rotate(150deg); }
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(15px); }
+}
+
+.animate-float {
+  animation: float-y 12s ease-in-out infinite;
+  will-change: transform;
+}
+
 @theme {
   --color-primary: #275DF5;
   --animate-marquee: marquee var(--duration, 40s) linear infinite;

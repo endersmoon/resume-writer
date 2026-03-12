@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const tiers = [
   {
@@ -37,7 +37,7 @@ export default function Pricing() {
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -50,10 +50,10 @@ export default function Pricing() {
           <p className="mt-3 text-sm text-gray-500">
             Every plan includes a dedicated expert, unlimited revisions, and a full refund guarantee.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Cards grid */}
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -65,7 +65,7 @@ export default function Pricing() {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {tiers.map((tier) => (
-              <motion.div
+              <m.div
                 key={tier.name}
                 variants={{
                   hidden: { opacity: 0, y: 24 },
@@ -102,10 +102,10 @@ export default function Pricing() {
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Footer note */}
         <p className="mt-6 text-center text-xs text-gray-400">

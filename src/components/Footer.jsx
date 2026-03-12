@@ -71,7 +71,7 @@ export default function Footer() {
                     key={label}
                     href={href}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     aria-label={label}
                     className="flex items-center justify-center w-8 h-8 rounded-full border border-white/10 text-white/40 hover:text-white hover:border-white/30 transition-colors duration-200"
                   >
@@ -90,7 +90,7 @@ export default function Footer() {
                   <a
                     href={href}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="text-sm hover:text-white transition-colors duration-200"
                   >
                     {label}
@@ -110,7 +110,7 @@ export default function Footer() {
               <a
                 href="https://play.google.com/store/apps/details?id=naukriApp.appModules.login"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-white/30 transition-colors duration-200 text-xs text-white/70 hover:text-white whitespace-nowrap"
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -121,7 +121,7 @@ export default function Footer() {
               <a
                 href="https://itunes.apple.com/in/app/naukri.com-job-search/id482877505"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 hover:border-white/30 transition-colors duration-200 text-xs text-white/70 hover:text-white whitespace-nowrap"
               >
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -150,7 +150,7 @@ export default function Footer() {
           <a
             href="http://infoedge.in"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="text-xs text-white/40 hover:text-white/60 transition-colors duration-200 font-medium"
           >
             An Info Edge venture
@@ -168,7 +168,7 @@ export default function Footer() {
                 key={label}
                 href={href}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="text-xs text-white/30 hover:text-white/60 transition-colors duration-200"
               >
                 {label}

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Target, UserCheck, PenLine, RefreshCw } from "lucide-react";
 
 const differentiators = [
@@ -35,7 +35,7 @@ export default function BeforeAfter() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left column */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -62,10 +62,10 @@ export default function BeforeAfter() {
             <p className="mt-4 text-xs text-gray-400">
               Starting from ₹2,204 · Consultation included · 2 revisions guaranteed
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Right column */}
-          <motion.div
+          <m.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -79,7 +79,7 @@ export default function BeforeAfter() {
               {differentiators.map((item, i) => {
                 const Icon = item.icon;
                 return (
-                  <motion.div
+                  <m.div
                     key={i}
                     variants={{
                       hidden: { opacity: 0, y: 24 },
@@ -102,11 +102,11 @@ export default function BeforeAfter() {
                         {item.description}
                       </p>
                     </div>
-                  </motion.div>
+                  </m.div>
                 );
               })}
             </div>
-          </motion.div>
+          </m.div>
 
         </div>
       </div>

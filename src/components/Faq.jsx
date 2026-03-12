@@ -1,5 +1,5 @@
 import { useState, useId } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
@@ -36,7 +36,7 @@ function FaqItem({ faq, index, isOpen, onToggle, isLast }) {
   const regionId = `faq-region-${id}`;
 
   return (
-    <motion.div
+    <m.div
       custom={index}
       variants={{
         hidden: { opacity: 0, y: 24 },
@@ -61,18 +61,18 @@ function FaqItem({ faq, index, isOpen, onToggle, isLast }) {
         >
           {faq.question}
         </span>
-        <motion.span
+        <m.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
           className={`ml-4 shrink-0 transition-colors duration-200 ${isOpen ? "text-primary" : "text-gray-400"}`}
         >
           <ChevronDown className="h-4 w-4" />
-        </motion.span>
+        </m.span>
       </button>
 
       <AnimatePresence initial={false}>
         {isOpen && (
-          <motion.div
+          <m.div
             id={regionId}
             role="region"
             aria-labelledby={headingId}
@@ -85,10 +85,10 @@ function FaqItem({ faq, index, isOpen, onToggle, isLast }) {
             <p className="pb-5 text-sm text-gray-500 leading-relaxed">
               {faq.answer}
             </p>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -100,7 +100,7 @@ export default function Faq() {
       <div className="max-w-3xl mx-auto">
 
         {/* Heading */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -113,10 +113,10 @@ export default function Faq() {
           <p className="mt-3 text-sm text-gray-500">
             Everything you need to know before getting started.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Single card container */}
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -136,7 +136,7 @@ export default function Faq() {
               onToggle={() => setOpenIndex(openIndex === index ? null : index)}
             />
           ))}
-        </motion.div>
+        </m.div>
 
       </div>
     </section>
