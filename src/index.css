@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-100% - var(--gap))); }
+}
+
+@keyframes marquee-reverse {
+  from { transform: translateX(calc(-100% - var(--gap))); }
+  to   { transform: translateX(0); }
+}
+
+@theme {
+  --animate-marquee: marquee var(--duration, 40s) linear infinite;
+  --animate-marquee-reverse: marquee-reverse var(--duration, 40s) linear infinite;
+}

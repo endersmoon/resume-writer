@@ -24,18 +24,9 @@ const steps = [
   },
 ];
 
-const fadeUpVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: i * 0.15, ease: [0.25, 0.4, 0.25, 1] },
-  }),
-};
-
 export default function HowItWorks() {
   return (
-    <section className="bg-slate-50 py-16 sm:py-24 px-4">
+    <section className="bg-white py-16 sm:py-24 px-4">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
@@ -54,45 +45,47 @@ export default function HowItWorks() {
           </p>
         </motion.div>
 
-        {/* Steps grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, i) => {
-            const Icon = step.icon;
-            return (
-              <motion.div
-                key={i}
-                custom={i}
-                variants={fadeUpVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.04, transition: { duration: 0.2 } }}
-                className="relative bg-white rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md hover:border-indigo-200 transition-colors duration-300 flex flex-col gap-4"
-              >
-                {/* Connector line (desktop only, not on last card) */}
-                {i < steps.length - 1 && (
-                  <span className="hidden lg:block absolute top-9 left-full w-6 h-px bg-gray-200 z-10" />
-                )}
+        {/* Feature grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="border border-gray-200 rounded-2xl overflow-hidden bg-white"
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {steps.map((step, i) => {
+              const Icon = step.icon;
+              return (
+                <div
+                  key={i}
+                  className="group/feature relative flex flex-col p-8 border-r border-b border-gray-200 cursor-default"
+                >
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-100 to-transparent opacity-0 group-hover/feature:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                {/* Number + icon row */}
-                <div className="flex items-center gap-3">
-                  <span className="flex items-center justify-center w-7 h-7 rounded-full bg-indigo-600 text-white text-xs font-bold shrink-0">
-                    {i + 1}
-                  </span>
-                  <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-50">
-                    <Icon className="w-5 h-5 text-indigo-600" />
+                  {/* Left accent bar */}
+                  <div className="absolute left-0 top-0 w-0.5 h-0 bg-indigo-500 group-hover/feature:h-full transition-all duration-300" />
+
+                  {/* Icon */}
+                  <div className="relative mb-5 flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-50">
+                    <Icon className="w-6 h-6 text-indigo-600" />
+                  </div>
+
+                  {/* Text */}
+                  <div className="relative">
+                    <p className="font-semibold text-gray-900 mb-2 transition-transform duration-200 group-hover/feature:translate-x-1">
+                      {step.title}
+                    </p>
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-
-                {/* Text */}
-                <div>
-                  <p className="font-semibold text-gray-900 leading-snug">{step.title}</p>
-                  <p className="mt-1 text-sm text-gray-500 leading-relaxed">{step.description}</p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        </motion.div>
 
       </div>
     </section>

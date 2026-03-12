@@ -1,5 +1,5 @@
 import Hero from "./components/Hero";
-import SocialProof from "./components/SocialProof";
+import Testimonials from "./components/Testimonials";
 import BeforeAfter from "./components/BeforeAfter";
 import HowItWorks from "./components/HowItWorks";
 import Pricing from "./components/Pricing";
@@ -9,10 +9,10 @@ function App() {
   return (
     <main>
       <Hero />
-      <SocialProof />
       <BeforeAfter />
       <HowItWorks />
       <Pricing />
+      <Testimonials />
       <Faq />
     </main>
   );

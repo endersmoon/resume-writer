@@ -51,14 +51,14 @@ export default function Hero() {
               </span>
               <br />
               <span className="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 via-white/90 to-rose-300">
-                A Naukri Expert.
+                A Naukri Resume Expert.
               </span>
             </h1>
           </motion.div>
 
           {/* Subheadline */}
           <motion.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <p className="text-base sm:text-lg text-white/40 mb-10 leading-relaxed font-light tracking-wide max-w-xl mx-auto">
+            <p className="text-xl sm:text-lg text-white/70 mb-10 leading-relaxed font-light tracking-wide max-w-xl mx-auto">
               A human who has done this 10,000 times, knows exactly what recruiters on Naukri look for — and spends their entire call making your resume one of them.
             </p>
           </motion.div>
@@ -69,7 +69,7 @@ export default function Hero() {
               href="#"
               className="inline-block px-6 py-3 rounded-full bg-white text-black font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors"
             >
-              Get My Expert →
+              Get My Resume Expert →
             </a>
           </motion.div>
 

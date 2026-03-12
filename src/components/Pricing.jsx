@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const tiers = [
   {
     name: "Entry Level",
@@ -31,42 +33,79 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <section className="max-w-8xl mx-auto px-6 py-16 space-y-8">
-      <div className="flex flex-wrap justify-center gap-6">
-        {tiers.map((tier, idx) => (
-          <div
-            key={tier.name}
-            className={[
-              "rounded-2xl border shadow-md p-6 w-72 space-y-3",
-              "transition-transform duration-200",
-              "hover:scale-105",
-              idx % 2 === 0 ? "hover:-rotate-1" : "hover:rotate-1",
-            ].join(" ")}
-          >
-            <h3 className="font-semibold text-lg">{tier.name}</h3>
-            <p className="text-sm text-gray-500">{tier.range}</p>
-            <p className="text-sm">
-              <s className="text-gray-400">{tier.original}</s>{" "}
-              <span className="font-semibold">{tier.price}</span>{" "}
-              <span className="text-gray-500">· You save {tier.savings}</span>
-            </p>
-            <a
-              href="#"
-              className="mt-6 block w-full text-center rounded-lg bg-black text-white py-2 text-sm font-semibold hover:bg-gray-800 transition-colors"
-            >
-              Get Started — {tier.price}
-            </a>
+    <section className="bg-slate-50 py-16 sm:py-24 px-4">
+      <div className="max-w-6xl mx-auto">
+
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+            Simple, transparent pricing.
+          </h2>
+          <p className="mt-3 text-sm text-gray-500">
+            Every plan includes a dedicated expert, unlimited revisions, and a full refund guarantee.
+          </p>
+        </motion.div>
+
+        {/* Cards grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="border border-gray-200 rounded-2xl overflow-hidden bg-white"
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {tiers.map((tier) => (
+              <div
+                key={tier.name}
+                className="group/feature relative flex flex-col p-8 border-r border-b border-gray-200 cursor-default"
+              >
+                {/* Hover gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-100 to-transparent opacity-0 group-hover/feature:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                {/* Left accent bar */}
+                <div className="absolute left-0 top-0 w-0.5 h-0 bg-indigo-500 group-hover/feature:h-full transition-all duration-300" />
+
+                <div className="relative flex flex-col flex-1">
+                  {/* Tier name + range */}
+                  <p className="font-semibold text-gray-900 mb-1 transition-transform duration-200 group-hover/feature:translate-x-1">
+                    {tier.name}
+                  </p>
+                  <p className="text-xs text-gray-500 mb-6">{tier.range}</p>
+
+                  {/* Price */}
+                  <div className="mt-auto">
+                    <p className="text-2xl font-bold text-gray-900 tracking-tight">{tier.price}</p>
+                    <p className="text-xs text-gray-400 mt-0.5">
+                      <s>{tier.original}</s>
+                      <span className="ml-2 text-indigo-600 font-medium">Save {tier.savings}</span>
+                    </p>
+
+                    <a
+                      href="#"
+                      className="mt-5 block w-full text-center rounded-lg bg-indigo-600 text-white py-2 text-sm font-semibold hover:bg-indigo-700 transition-colors"
+                    >
+                      Get Started
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </motion.div>
+
+        {/* Footer note */}
+        <p className="mt-6 text-center text-xs text-gray-400">
+          Not happy with your expert? We'll assign a new one — or refund you. No hoops.
+        </p>
+
       </div>
-      <p className="text-sm text-gray-500 leading-relaxed">
-        Every plan includes a dedicated expert, unlimited revisions, and a full
-        refund guarantee. Not happy with your expert? We'll assign a new one —
-        or refund you. No hoops.
-      </p>
-      <p className="text-sm font-semibold">
-        Not happy? New expert or full refund. No hoops.
-      </p>
     </section>
   );
 }
