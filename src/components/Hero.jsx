@@ -56,11 +56,11 @@ export default function Hero() {
           <m.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
               <span className="bg-clip-text text-transparent bg-linear-to-b from-white to-white/80">
-                Not a tool. Not a template.
+                Get your resume rebuilt
               </span>
               <br />
               <SparklesText
-                text="A Naukri Resume Expert."
+                text="by a Naukri Expert"
                 textClassName="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 via-white/90 to-rose-300"
               />
             </h1>
@@ -68,8 +68,8 @@ export default function Hero() {
 
           {/* Subheadline */}
           <m.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <p className="text-xl sm:text-lg text-white/70 mb-10 leading-relaxed font-light tracking-wide max-w-xl mx-auto">
-              A human who has done this 10,000 times, knows exactly what recruiters on Naukri look for — and spends their entire call making your resume one of them.
+            <p className="text-lg sm:text-2xl text-white/80 mb-10 leading-relaxed font-light tracking-wide max-w-2xl mx-auto">
+             Built on what recruiters in your field are actually shortlisting on Naukri today. Not guesswork. Not AI. Not generic advice.
             </p>
           </m.div>
 
@@ -77,9 +77,9 @@ export default function Hero() {
           <m.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible">
             <a
               href="#"
-              className="inline-block px-6 py-3 rounded-full bg-white text-black font-semibold text-sm tracking-wide hover:bg-white/90 transition-colors"
+              className="inline-block px-6 py-4 rounded-full bg-white text-black font-semibold text-xl tracking-wide hover:bg-white/90 transition-colors"
             >
-              Get My Resume Expert →
+              Rebuild My Resume
             </a>
           </m.div>
 

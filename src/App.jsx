@@ -1,7 +1,9 @@
 import { lazy, Suspense } from "react";
 import { LazyMotion, domAnimation } from "framer-motion";
 import Hero from "./components/Hero";
+import MeetOurExperts from "./components/MeetOurExperts";
 
+const ResumeComparison = lazy(() => import("./components/ResumeComparison"));
 const BeforeAfter  = lazy(() => import("./components/BeforeAfter"));
 const HowItWorks   = lazy(() => import("./components/HowItWorks"));
 const Pricing      = lazy(() => import("./components/Pricing"));
@@ -14,7 +16,9 @@ function App() {
     <LazyMotion features={domAnimation} strict>
       <main>
         <Hero />
+        <MeetOurExperts />
         <Suspense fallback={null}>
+          <ResumeComparison />
           <BeforeAfter />
           <HowItWorks />
           <Pricing />
