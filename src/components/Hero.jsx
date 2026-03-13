@@ -79,7 +79,7 @@ export default function Hero() {
               href="#"
               className="inline-block px-6 py-4 rounded-full bg-white text-black font-semibold text-xl tracking-wide hover:bg-white/90 transition-colors"
             >
-              Rebuild My Resume
+              Rebuild My Resume →
             </a>
           </m.div>
 

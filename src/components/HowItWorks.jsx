@@ -4,23 +4,23 @@ import { UserCheck, Phone, FileEdit, RefreshCw } from "lucide-react";
 const steps = [
   {
     icon: UserCheck,
-    title: "Expert matched to you",
-    description: "By field, level, and Naukri profile.",
+    title: "We find your expert — before you even pick up the phone",
+    description: "Based on your Naukri profile, we match you with the right expert. Someone who has rebuilt resumes in your exact field.",
   },
   {
     icon: Phone,
-    title: "They call you",
-    description: "Within hours. One-on-one. Unlimited sessions. 🔒 7 days or full refund.",
+    title: "Your expert reaches out to schedule a call",
+    description: "They contact you within a few hours to fix a time that works for you. There's no limit on sessions.",
   },
   {
     icon: FileEdit,
-    title: "Resume rebuilt in 72h",
-    description: "From scratch, on Naukri's shortlist data.",
+    title: "Your resume is rebuilt — not edited",
+    description: "Expert rebuilds your resume from scratch using Naukri's shortlist data for your industry. Delivered in 72h.",
   },
   {
     icon: RefreshCw,
-    title: "Revisions until you're ready",
-    description: "Unlimited. New expert or refund if needed.",
+    title: "Revisions until you're completely confident",
+    description: "Unlimited revisions. Not happy? Request a different expert or get a full refund.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function HowItWorks() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-            Four steps. Then interviews.
+            Here's what happens — and what you walk away with.
           </h2>
           <p className="mt-3 text-sm text-gray-500">
             Only Naukri Expert writers see what recruiters see. ATS. AI filters. Human eyes. In that order.

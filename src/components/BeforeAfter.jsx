@@ -1,30 +1,30 @@
 import { m } from "framer-motion";
-import { Target, UserCheck, PenLine, RefreshCw } from "lucide-react";
+import { UserCheck, Database, PenLine, ShieldCheck } from "lucide-react";
 
 const differentiators = [
   {
-    icon: Target,
-    title: "Recruiter-Informed Writing",
+    icon: UserCheck,
+    title: "Rebuilt by a real human expert",
     description:
-      "Your writer uses live keyword data from Naukri's platform — the same data recruiters use to search.",
+      "Not a template. Not a generator. A specialist who has rebuilt thousands of resumes in your exact field.",
   },
   {
-    icon: UserCheck,
-    title: "Personal Consultation",
+    icon: Database,
+    title: "Based on actual recruiter behavior data",
     description:
-      "45-minute 1-on-1 call. Your expert learns your career deeply before writing a single word.",
+      "Only Naukri Expert resume writers see what happens on the recruiter's side — how they search, filter, and shortlist.",
   },
   {
     icon: PenLine,
-    title: "Written by Hand, Not AI",
+    title: "Domain-specific expertise",
     description:
-      "Every line is crafted manually. No templates. No generators. Genuine expertise, applied to your story.",
+      "No freelancer, no AI tool, no other service has this. Your expert knows your industry's shortlist patterns.",
   },
   {
-    icon: RefreshCw,
-    title: "Two Rounds of Revisions",
+    icon: ShieldCheck,
+    title: "Unlimited revisions with guarantee",
     description:
-      "Your expert refines until the resume reflects exactly who you are and where you want to go.",
+      "Revisions until you're completely confident. Not happy with your expert? Request a new one — or get a full refund.",
   },
 ];
 
@@ -42,25 +42,25 @@ export default function BeforeAfter() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-xs font-semibold tracking-widest text-primary uppercase mb-4">
-              India's Leading Resume Specialists
+              Why professionals choose Naukri Expert
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-6">
-              Your career story deserves more than a{" "}
-              <em className="not-italic text-primary">template.</em>
+              No freelancer, no AI tool, no other service has{" "}
+              <em className="not-italic text-primary">access to this.</em>
             </h2>
             <p className="text-gray-500 leading-relaxed mb-8">
-              Every Naukri resume is handcrafted by a specialist after a personal
-              consultation — built with 27 years of insider knowledge about how
-              Indian recruiters actually hire.
+              Naukri is where India's recruiters actually search, filter, and hire.
+              Only Naukri Expert resume writers see what happens on the recruiter's
+              side — and they bring that insight directly to your resume.
             </p>
             <a
               href="#"
               className="inline-block px-6 py-3 rounded-full bg-primary text-white font-semibold text-sm tracking-wide hover:opacity-90 transition-opacity"
             >
-              Begin Your Resume
+              Rebuild My Resume →
             </a>
             <p className="mt-4 text-xs text-gray-400">
-              Starting from ₹2,204 · Consultation included · 2 revisions guaranteed
+              Starting from ₹2,204 · One time payment · Full refund guarantee
             </p>
           </m.div>
 

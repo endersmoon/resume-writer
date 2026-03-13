@@ -3,6 +3,7 @@ import { LazyMotion, domAnimation } from "framer-motion";
 import Hero from "./components/Hero";
 import MeetOurExperts from "./components/MeetOurExperts";
 
+const SocialProof   = lazy(() => import("./components/SocialProof"));
 const ResumeComparison = lazy(() => import("./components/ResumeComparison"));
 const BeforeAfter  = lazy(() => import("./components/BeforeAfter"));
 const HowItWorks   = lazy(() => import("./components/HowItWorks"));
@@ -18,6 +19,7 @@ function App() {
         <Hero />
         <MeetOurExperts />
         <Suspense fallback={null}>
+          <SocialProof />
           <ResumeComparison />
           <BeforeAfter />
           <HowItWorks />

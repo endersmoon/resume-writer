@@ -152,10 +152,10 @@ function ComparisonSlider({ data }) {
       {/* Column headers */}
       <div className="grid grid-cols-2 w-full overflow-hidden rounded-t-2xl border border-b-0 border-gray-200">
         <div className="bg-gray-100 text-gray-400 text-[10px] font-extrabold tracking-[0.12em] uppercase py-2.5 px-5">
-          Self-Created Version
+          What your resume probably says right now
         </div>
         <div className="bg-indigo-50 text-primary text-[10px] font-extrabold tracking-[0.12em] uppercase py-2.5 px-5 text-right">
-          Expert Rebuilt Version
+          What recruiters are actually scanning for
         </div>
       </div>
 
@@ -292,10 +292,10 @@ export default function ResumeComparison() {
           className="text-center mb-10"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-            The same experience. Two completely different stories.
+            Your resume isn't the problem. The way it's written is.
           </h2>
           <p className="mt-3 text-sm text-gray-500">
-            See what changes when a Naukri Expert rebuilds your resume.
+            Here's what recruiters on Naukri are actually scanning for — and why most resumes never make it through.
           </p>
         </m.div>
 

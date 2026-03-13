@@ -2,39 +2,39 @@ import { AnimatedTestimonials } from "./ui/AnimatedTestimonials";
 
 const experts = [
   {
-    name: "Priya Sharma",
-    designation: "Senior Resume Expert · 12 years · IT & Product",
+    name: "Meera",
+    designation: "Resume Expert · 11 years · Technology & Product",
     quote:
-      "I've reviewed over 30,000 Naukri profiles. Most resumes fail in the first 6 seconds — not because of experience, but because of how it's presented. I fix that.",
-    src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3387&auto=format&fit=crop",
+      "A product leader's resume fails when it lists features shipped instead of markets moved. I look for the decisions that changed the product's direction — that's what a hiring committee actually wants to understand.",
+    src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400",
   },
   {
-    name: "Arjun Mehta",
-    designation: "Resume Expert · 10 years · Finance & Banking",
+    name: "Anjali",
+    designation: "Resume Expert · 9 years · Finance & Banking",
     quote:
-      "Recruiters in BFSI scan for very specific keywords. I know exactly which ones get a response from HCL, BYJU's, Paytm — and I make sure your resume speaks their language.",
-    src: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=3387&auto=format&fit=crop",
+      "Finance professionals undersell themselves consistently. They write what they computed. I rewrite it as what they controlled — there's a significant difference in how a CFO reads those two things.",
+    src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&h=400",
   },
   {
-    name: "Neha Kapoor",
-    designation: "Resume Expert · 8 years · Marketing & Growth",
+    name: "Priya",
+    designation: "Resume Expert · 7 years · Sales & Business Development",
     quote:
-      "A great marketing resume should itself be great marketing. I help you quantify impact, sharpen your positioning, and craft a story that gets callbacks.",
-    src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=3461&auto=format&fit=crop",
+      "Every sales resume says 'exceeded targets.' The ones that get shortlisted say what the territory looked like before they arrived and what it looked like after. That's the only number that matters.",
+    src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400",
   },
   {
-    name: "Rahul Verma",
-    designation: "Resume Expert · 11 years · Engineering & R&D",
+    name: "Sunita",
+    designation: "Resume Expert · 12 years · Human Resources & Org Design",
     quote:
-      "Technical roles demand technical precision. I've helped engineers at every level — from freshers to CTOs — transform their GitHub and project histories into compelling resumes.",
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3387&auto=format&fit=crop",
+      "HR leaders write about initiatives. Recruiters want to see org impact — attrition numbers, culture shifts, workforce transformations. The work is the same. The framing is entirely different.",
+    src: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&h=400",
   },
   {
-    name: "Sanya Bose",
-    designation: "Resume Expert · 9 years · HR & Operations",
+    name: "Vikram",
+    designation: "Resume Expert · 13 years · Technology & Engineering Leadership",
     quote:
-      "I help professionals in HR and ops articulate the invisible work — the systems they built, the fires they put out, the culture they shaped. That's what gets noticed.",
-    src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=3388&auto=format&fit=crop",
+      "Engineering leaders confuse technical depth with leadership signal. Recruiters at the VP level aren't reading for what you built — they're reading for what you decided not to build, and whether you can defend that call.",
+    src: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400",
   },
 ];
 
@@ -48,8 +48,9 @@ export default function MeetOurExperts() {
             Meet our experts
           </h2>
           <p className="mt-4 text-slate-500 max-w-xl mx-auto text-base">
-            Each expert is a Naukri veteran who has spent years on the recruiter
-            side — they know what gets shortlisted, and they'll get you there.
+            Each expert has spent years on the Naukri recruiter side — they know
+            exactly what gets shortlisted in your field, and they'll apply that
+            directly to your resume.
           </p>
         </div>
         <AnimatedTestimonials testimonials={experts} autoplay />

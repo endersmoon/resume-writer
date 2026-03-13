@@ -48,7 +48,7 @@ export default function Pricing() {
             Simple, transparent pricing.
           </h2>
           <p className="mt-3 text-sm text-gray-500">
-            Every plan includes a dedicated expert, unlimited revisions, and a full refund guarantee.
+            Pricing is based on your experience level. One time payment. No subscription.
           </p>
         </m.div>
 
@@ -98,7 +98,7 @@ export default function Pricing() {
                       href="#"
                       className="mt-5 block w-full text-center rounded-full bg-primary text-white py-2 text-sm font-semibold hover:opacity-90 transition-opacity"
                     >
-                      Get Started
+                      Get Started — ₹{tier.price.replace("₹", "")}
                     </a>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ export default function Pricing() {
 
         {/* Footer note */}
         <p className="mt-6 text-center text-xs text-gray-400">
-          Not happy with your expert? We'll assign a new one — or refund you. No hoops.
+          Full refund guarantee. Unlimited revisions. Refund if your expert doesn't reach out in 7 days — no questions asked.
         </p>
 
       </div>

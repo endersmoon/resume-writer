@@ -3,51 +3,51 @@ import { Marquee } from "@/registry/magicui/marquee";
 
 const reviews = [
   {
+    name: "Rakesh M.",
+    role: "VP Operations",
+    body: "I thought my resume was fine. The Naukri expert completely changed how my leadership was positioned. I finally understood what recruiters look for.",
+    img: "https://avatar.vercel.sh/rakesh",
+  },
+  {
+    name: "Anjali S.",
+    role: "Director of Product",
+    body: "I had used AI tools before. This was different. The expert pulled out things I would never have thought to highlight.",
+    img: "https://avatar.vercel.sh/anjali",
+  },
+  {
+    name: "Vikram K.",
+    role: "Principal Engineer",
+    body: "After the rebuild, I felt confident sending my resume to senior contacts. That confidence alone made it worth it.",
+    img: "https://avatar.vercel.sh/vikram",
+  },
+  {
     name: "Priya Sharma",
     role: "Senior Software Engineer, Infosys",
-    body: "Got 3 interview calls within a week of updating my resume. The expert knew exactly what Naukri recruiters look for.",
+    body: "Got 3 interview calls within a week. The expert knew exactly what Naukri recruiters look for — I had no idea my resume was missing so much.",
     img: "https://avatar.vercel.sh/priya",
   },
   {
     name: "Rahul Mehta",
     role: "Product Manager, Flipkart",
-    body: "I'd been job hunting for 4 months with no response. After the session, callbacks started coming in within days.",
+    body: "I'd been applying for 4 months with no response. After the rebuild, callbacks started coming in within days.",
     img: "https://avatar.vercel.sh/rahul",
   },
   {
     name: "Ananya Iyer",
     role: "Data Analyst, TCS",
-    body: "Worth every rupee. My profile views on Naukri went up 5x after the resume rewrite.",
+    body: "Worth every rupee. My profile views on Naukri went up 5x after the rewrite. The expert knew what keywords recruiters actually search for.",
     img: "https://avatar.vercel.sh/ananya",
-  },
-  {
-    name: "Vikram Nair",
-    role: "Engineering Manager, Wipro",
-    body: "The expert challenged every bullet point and helped me quantify impact I didn't even think to include.",
-    img: "https://avatar.vercel.sh/vikram",
-  },
-  {
-    name: "Neha Gupta",
-    role: "HR Business Partner, HCL",
-    body: "Ironically, even someone in HR needed help making their resume land. This service delivered.",
-    img: "https://avatar.vercel.sh/neha",
-  },
-  {
-    name: "Arjun Patel",
-    role: "Backend Developer, Zomato",
-    body: "Switched from 0 callbacks to 4 in two weeks. The ATS optimisation advice alone was worth it.",
-    img: "https://avatar.vercel.sh/arjun",
   },
   {
     name: "Kavitha Reddy",
     role: "Finance Manager, Deloitte",
-    body: "Clean, focused, results-oriented resume. Helped me land a 30% salary hike at my new company.",
+    body: "Led me to a 30% salary hike. The expert rewrote my finance experience as what I controlled — not just what I computed.",
     img: "https://avatar.vercel.sh/kavitha",
   },
   {
     name: "Siddharth Joshi",
     role: "DevOps Engineer, Razorpay",
-    body: "Detailed, personal session — not a template fill-in. Felt like the expert genuinely cared about my profile.",
+    body: "Detailed, personal session — not a template. The expert challenged every bullet point and helped me quantify impact I hadn't thought to include.",
     img: "https://avatar.vercel.sh/siddharth",
   },
 ];
