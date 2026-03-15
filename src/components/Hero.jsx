@@ -40,8 +40,8 @@ export default function Hero() {
             animate="visible"
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/3 border border-white/8 mb-8 md:mb-12"
           >
-            <Circle className="h-2 w-2 fill-rose-500/80" />
-            <span className="text-sm text-white/60 tracking-wide">Built on what recruiters actually shortlist on Naukri</span>
+            <Circle className="h-2 w-2 fill-emerald-500/80" />
+            <span className="text-xl text-white/90 tracking-wide">Built on what recruiters actually shortlist on Naukri</span>
           </m.div>
 
           {/* Headline */}

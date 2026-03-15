@@ -30,7 +30,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-white py-20 sm:py-32 px-6">
+    <section className="bg-slate-50 py-20 sm:py-32 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}

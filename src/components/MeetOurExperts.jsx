@@ -45,7 +45,7 @@ export default function MeetOurExperts() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative w-full bg-slate-50 py-16 overflow-hidden" ref={ref}>
+    <section className="relative w-full bg-white py-16 overflow-hidden" ref={ref}>
       {/* Dot-grid background */}
       <svg
         className="absolute inset-0 w-full h-full opacity-[0.9] pointer-events-none"
@@ -61,20 +61,19 @@ export default function MeetOurExperts() {
       {/* Radial fade to keep center clean */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 80% 60% at center, transparent 0%, rgba(248,250,252,0.55) 50%, #f8fafc 100%)" }}
+        style={{ background: "radial-gradient(ellipse 80% 60% at center, transparent 0%, rgba(248,250,252,0.55) 50%, #fff 100%)" }}
       />
       <div className="container mx-auto px-4 md:px-6 relative">
         <m.div
-          className="text-center mb-4"
           initial={{ opacity: 0, y: 32 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <p className="text-xs uppercase tracking-widest text-slate-400 mb-3">Your resume expert</p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight">
+          <p className="text-xs uppercase text-center tracking-widest text-slate-400 mb-3">Your resume expert</p>
+          <h2 className="text-4xl sm:text-5xl  text-center font-bold text-slate-900 tracking-tight">
             Meet our experts
-          </h2>
-          <p className="mt-4 text-slate-500 max-w-xl mx-auto text-base">
+          </h2> 
+          <p className="mt-4 text-center text-slate-500 max-w-xl mx-auto text-base">
             Each expert has spent years on the Naukri recruiter side — they know
             exactly what gets shortlisted in your field, and they'll apply that
             directly to your resume.
