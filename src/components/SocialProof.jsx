@@ -18,9 +18,12 @@ const stats = [
   },
 ];
 
+const imgPattern = "/pattern.svg";
+
 export default function SocialProof() {
   return (
-    <section className="bg-[#040216] py-16 sm:py-20 px-4">
+    <section className="relative bg-[#040216] py-16 sm:py-20 px-4 overflow-hidden">
+      <img src={imgPattern} alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none" style={{  opacity: 1 }} />
       <div className="max-w-5xl mx-auto">
         <m.div
           initial="hidden"

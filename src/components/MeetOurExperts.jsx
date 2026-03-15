@@ -1,3 +1,5 @@
+import { m, useInView } from "framer-motion";
+import { useRef } from "react";
 import { AnimatedTestimonials } from "./ui/AnimatedTestimonials";
 
 const experts = [
@@ -6,14 +8,14 @@ const experts = [
     designation: "Resume Expert · 11 years · Technology & Product",
     quote:
       "A product leader's resume fails when it lists features shipped instead of markets moved. I look for the decisions that changed the product's direction — that's what a hiring committee actually wants to understand.",
-    src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400",
+    src: "./w-1.png",
   },
   {
     name: "Anjali",
     designation: "Resume Expert · 9 years · Finance & Banking",
     quote:
       "Finance professionals undersell themselves consistently. They write what they computed. I rewrite it as what they controlled — there's a significant difference in how a CFO reads those two things.",
-    src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&h=400",
+    src: "./w-2.png",
   },
   {
     name: "Priya",
@@ -39,10 +41,18 @@ const experts = [
 ];
 
 export default function MeetOurExperts() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+
   return (
-    <section className="relative w-full bg-slate-50 py-16">
+    <section className="relative w-full bg-slate-50 py-16" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-4">
+        <m.div
+          className="text-center mb-4"
+          initial={{ opacity: 0, y: 32 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <p className="text-xs uppercase tracking-widest text-slate-400 mb-3">Your resume expert</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
             Meet our experts
@@ -52,8 +62,14 @@ export default function MeetOurExperts() {
             exactly what gets shortlisted in your field, and they'll apply that
             directly to your resume.
           </p>
-        </div>
-        <AnimatedTestimonials testimonials={experts} autoplay />
+        </m.div>
+        <m.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+        >
+          <AnimatedTestimonials testimonials={experts} autoplay />
+        </m.div>
       </div>
     </section>
   );

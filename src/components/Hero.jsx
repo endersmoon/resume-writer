@@ -1,7 +1,7 @@
 import { m } from "framer-motion";
 import { Circle } from "lucide-react";
-import ElegantShape from "./ElegantShape";
 import SparklesText from "./SparklesText";
+import { ShaderAnimation } from "./ui/shader-animation";
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -14,8 +14,8 @@ const fadeUpVariants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] w-full flex items-center justify-center overflow-hidden bg-linear-[121deg,#040216_60.06%,#164AB0_97.36%]">
-      <div className="absolute inset-0 bg-linear-to-br from-indigo-500/5 via-transparent to-rose-500/5 blur-3xl" />
+    <section className="relative min-h-[85vh] w-full flex items-center justify-center overflow-hidden bg-black">
+      <ShaderAnimation />
 
       <div className="absolute top-6 left-6 z-20">
         <img
@@ -27,14 +27,6 @@ export default function Hero() {
           width="120"
           height="32"
         />
-      </div>
-
-      <div className="absolute inset-0 overflow-hidden">
-        <ElegantShape delay={0.3} width={600} height={140} rotate={12} gradient="from-indigo-500/[0.15]" className="left-[-10%] md:left-[-5%] top-[15%] md:top-[20%]" />
-        <ElegantShape delay={0.5} width={500} height={120} rotate={-15} gradient="from-rose-500/[0.15]" className="right-[-5%] md:right-[0%] top-[70%] md:top-[75%]" />
-        <ElegantShape delay={0.4} width={300} height={80} rotate={-8} gradient="from-violet-500/[0.15]" className="left-[5%] md:left-[10%] bottom-[5%] md:bottom-[10%]" />
-        <ElegantShape delay={0.6} width={200} height={60} rotate={20} gradient="from-amber-500/[0.15]" className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]" />
-        <ElegantShape delay={0.7} width={150} height={40} rotate={-25} gradient="from-cyan-500/[0.15]" className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-6">
@@ -60,7 +52,7 @@ export default function Hero() {
               </span>
               <br />
               <SparklesText
-                text="by a Naukri Expert"
+                text="by Naukri Experts"
                 textClassName="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 via-white/90 to-rose-300"
               />
             </h1>
@@ -69,7 +61,7 @@ export default function Hero() {
           {/* Subheadline */}
           <m.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
             <p className="text-lg sm:text-2xl text-white/80 mb-10 leading-relaxed font-light tracking-wide max-w-2xl mx-auto">
-             Built on what recruiters in your field are actually shortlisting on Naukri today. Not guesswork. Not AI. Not generic advice.
+             We will build on what recruiters in your field are actually shortlisting on Naukri today. Not guesswork.
             </p>
           </m.div>
 
@@ -86,7 +78,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute inset-0 bg-linear-to-t from-[#040216] via-transparent to-[#040216]/80 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-black/30 pointer-events-none" />
     </section>
   );
 }
