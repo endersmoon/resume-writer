@@ -60,7 +60,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <m.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <p className="text-lg sm:text-2xl text-white/80 mb-10 leading-relaxed font-light tracking-wide max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-white/60 mb-10 leading-relaxed max-w-2xl mx-auto">
              We will build on what recruiters in your field are actually shortlisting on Naukri today. Not guesswork.
             </p>
           </m.div>

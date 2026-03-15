@@ -45,8 +45,8 @@ export default function SocialProof() {
               className="bg-[#040216] px-8 py-10 flex flex-col gap-3"
             >
               <p className="text-5xl font-bold text-white tracking-tight">{stat.value}</p>
-              <p className="text-base font-semibold text-white leading-[1.4]">{stat.label}</p>
-              <p className="text-xs font-bold text-white/40 tracking-[0.08em] uppercase">{stat.source}</p>
+              <p className="text-base font-medium text-white/80 leading-relaxed">{stat.label}</p>
+              <p className="text-xs font-medium text-white/40 tracking-[0.08em] uppercase">{stat.source}</p>
             </m.div>
           ))}
         </m.div>

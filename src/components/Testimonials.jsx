@@ -76,7 +76,7 @@ function ReviewCard({ img, name, role, body }) {
 export default function Testimonials() {
   return (
     <section className="relative w-full py-16 overflow-hidden bg-white">
-      <p className="text-center text-sm font-medium text-gray-400 uppercase tracking-widest mb-10">
+      <p className="text-center text-xs font-medium text-gray-400 uppercase tracking-widest mb-10">
         What professionals are saying
       </p>
 

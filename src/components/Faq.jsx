@@ -107,10 +107,10 @@ export default function Faq() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight">
             Frequently asked questions
           </h2>
-          <p className="mt-3 text-sm text-gray-500">
+          <p className="mt-3 text-base text-gray-500">
             Everything you need to know before getting started.
           </p>
         </m.div>

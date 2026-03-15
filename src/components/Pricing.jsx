@@ -44,10 +44,10 @@ export default function Pricing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight">
             Simple, transparent pricing.
           </h2>
-          <p className="mt-3 text-sm text-gray-500">
+          <p className="mt-3 text-base text-gray-500">
             Pricing is based on your experience level. One time payment. No subscription.
           </p>
         </m.div>

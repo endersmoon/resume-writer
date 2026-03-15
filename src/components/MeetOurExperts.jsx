@@ -45,8 +45,25 @@ export default function MeetOurExperts() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="relative w-full bg-slate-50 py-16" ref={ref}>
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="relative w-full bg-slate-50 py-16 overflow-hidden" ref={ref}>
+      {/* Dot-grid background */}
+      <svg
+        className="absolute inset-0 w-full h-full opacity-[0.9] pointer-events-none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <pattern id="dot-grid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="1" fill="#94a3b8" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#dot-grid)" />
+      </svg>
+      {/* Radial fade to keep center clean */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse 80% 60% at center, transparent 0%, rgba(248,250,252,0.55) 50%, #f8fafc 100%)" }}
+      />
+      <div className="container mx-auto px-4 md:px-6 relative">
         <m.div
           className="text-center mb-4"
           initial={{ opacity: 0, y: 32 }}
@@ -54,7 +71,7 @@ export default function MeetOurExperts() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <p className="text-xs uppercase tracking-widest text-slate-400 mb-3">Your resume expert</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 tracking-tight">
             Meet our experts
           </h2>
           <p className="mt-4 text-slate-500 max-w-xl mx-auto text-base">
