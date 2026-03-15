@@ -3,28 +3,28 @@ import { UserCheck, Database, PenLine, ShieldCheck } from "lucide-react";
 
 const differentiators = [
   {
-    icon: UserCheck,
-    title: "Rebuilt by a real human expert",
+    icon: Database,
+    title: "Real recruiter search patterns",
     description:
-      "Not a template. Not a generator. A specialist who has rebuilt thousands of resumes in your exact field.",
+      "We know which keywords recruiters in your field actually search for — and which ones they skip entirely.",
   },
   {
-    icon: Database,
-    title: "Based on actual recruiter behavior data",
+    icon: UserCheck,
+    title: "Shortlist signals, not guesswork",
     description:
-      "Only Naukri Expert resume writers see what happens on the recruiter's side — how they search, filter, and shortlist.",
+      "Your expert sees which profiles get opened and which get passed over. Your resume is rewritten around what works.",
   },
   {
     icon: PenLine,
-    title: "Domain-specific expertise",
+    title: "Domain-matched expertise",
     description:
-      "No freelancer, no AI tool, no other service has this. Your expert knows your industry's shortlist patterns.",
+      "Your expert has rebuilt thousands of resumes in your exact industry. They know the difference between a good profile and a shortlisted one.",
   },
   {
     icon: ShieldCheck,
-    title: "Unlimited revisions with guarantee",
+    title: "Unlimited revisions, full refund",
     description:
-      "Revisions until you're completely confident. Not happy with your expert? Request a new one — or get a full refund.",
+      "Not confident? Unlimited rounds. Not happy with your expert? New one assigned. Still not satisfied? Full refund.",
   },
 ];
 
@@ -42,25 +42,20 @@ export default function BeforeAfter() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-xs font-semibold tracking-widest text-primary uppercase mb-4">
-              Why professionals choose Naukri Expert
+              The Naukri advantage
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-6">
-              No freelancer, no AI tool, no other service has{" "}
-              <em className="not-italic text-primary">access to this.</em>
+              The only resume service with{" "}
+              <em className="not-italic text-primary">recruiter-side data.</em>
             </h2>
-            <p className="text-gray-500 leading-relaxed mb-8">
-              Naukri is where India's recruiters actually search, filter, and hire.
-              Only Naukri Expert resume writers see what happens on the recruiter's
-              side — and they bring that insight directly to your resume.
+            <p className="text-gray-500 leading-relaxed">
+              Every day, over 1,20,000 recruiters search, filter, and shortlist on Naukri.
+              We see what they search for, which profiles they open, and what makes them
+              reach out. No freelancer, no AI tool, no other service has access to this.
             </p>
-            <a
-              href="#"
-              className="inline-block px-6 py-3 rounded-full bg-primary text-white font-semibold text-sm tracking-wide hover:opacity-90 transition-opacity"
-            >
-              Rebuild My Resume →
-            </a>
-            <p className="mt-4 text-xs text-gray-400">
-              Starting from ₹2,204 · One time payment · Full refund guarantee
+            <p className="text-gray-500 leading-relaxed mt-4">
+              Your expert brings that data directly into your resume — rewriting every line
+              around what actually gets shortlisted in your field.
             </p>
           </m.div>
 

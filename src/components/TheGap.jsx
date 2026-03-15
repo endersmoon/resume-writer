@@ -14,22 +14,22 @@ const CheckIcon = () => (
 );
 
 const before = [
-  "Responsible for managing a team of X",
-  "Led the rollout of Y project",
+  "Responsible for managing a team of 12",
+  "Led the rollout of a new platform",
   "Worked with cross-functional teams",
-  "Improved efficiency by Z%",
-  "Proficient in [tool], [tool], [tool]",
-  "Assisted in developing strategy for...",
-  "Contributed to...",
+  "Improved system performance by 40%",
+  "Proficient in Python, SQL, Tableau",
+  "Assisted in developing growth strategy",
+  "Contributed to revenue targets",
 ];
 
 const after = [
-  "Did this person's responsibility grow over time?",
-  "Did they make decisions — or just execute them?",
-  "Did they own outcomes — or just contribute to them?",
-  "Did they influence people outside their team?",
-  "Did their role get bigger even if their title didn't?",
-  "Are they operating at a senior level right now?",
+  "Did this person's scope grow — or stay flat?",
+  "Did they make the call — or just execute someone else's?",
+  "Did they own the outcome — or just touch it?",
+  "Did they pull people in from outside their team?",
+  "Did their role outgrow their title?",
+  "Are they already operating at the next level?",
   "Would I trust them with more?",
 ];
 
@@ -56,11 +56,12 @@ export default function TheGap() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
+          <p className="text-xs uppercase tracking-widest text-[#6b6b8a] mb-3">The real problem</p>
           <h2 className="font-bold text-[#0e0b16] text-4xl sm:text-5xl tracking-tight leading-tight max-w-3xl mx-auto">
-            Your resume isn't the problem. The way it's written is.
+            Your experience isn't the problem. How it reads to a recruiter is.
           </h2>
-          <p className="mt-4 text-[#6b6b8a] text-base sm:text-lg">
-            Here's what recruiters on Naukri are actually scanning for — and why most resumes never make it through.
+          <p className="mt-4 text-[#6b6b8a] text-base sm:text-lg max-w-2xl mx-auto">
+            Most resumes describe what you did. Recruiters are scanning for something else entirely — here's the gap.
           </p>
         </m.div>
 
@@ -81,7 +82,7 @@ export default function TheGap() {
               Current Resume
             </span>
             <h3 className="text-[18px] font-bold text-[#4a4a68] mb-8">
-              What your resume probably says right now
+              What you wrote
             </h3>
             <ul className="space-y-5">
               {before.map((item, i) => (
@@ -109,7 +110,7 @@ export default function TheGap() {
               Naukri Pro Rebuild
             </span>
             <h3 className="text-[18px] font-bold text-[#1a1a2e] mb-8">
-              What recruiters are actually scanning for
+              What a recruiter is actually thinking
             </h3>
             <ul className="space-y-5">
               {after.map((item, i) => (
@@ -120,7 +121,7 @@ export default function TheGap() {
               ))}
             </ul>
             <div className="mt-10 pt-6 border-t border-[#F5A623]/20 italic text-[#F5A623] text-sm font-bold">
-              4x higher chances of getting noticed by top recruiters
+              This is what our experts rewrite your resume around.
             </div>
           </m.div>
         </m.div>

@@ -41,18 +41,18 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/3 border border-white/8 mb-8 md:mb-12"
           >
             <Circle className="h-2 w-2 fill-rose-500/80" />
-            <span className="text-sm text-white/60 tracking-wide">10+ years · 1,20,000+ resumes · Naukri recruiter data</span>
+            <span className="text-sm text-white/60 tracking-wide">Built on what recruiters actually shortlist on Naukri</span>
           </m.div>
 
           {/* Headline */}
           <m.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
               <span className="bg-clip-text text-transparent bg-linear-to-b from-white to-white/80">
-                Get your resume rebuilt
+                Recruiters decide in 6 seconds.
               </span>
               <br />
               <SparklesText
-                text="by Naukri Experts"
+                text="Is your resume ready?"
                 textClassName="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 via-white/90 to-rose-300"
               />
             </h1>
@@ -61,7 +61,7 @@ export default function Hero() {
           {/* Subheadline */}
           <m.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
             <p className="text-base sm:text-lg text-white/60 mb-10 leading-relaxed max-w-2xl mx-auto">
-             We will build on what recruiters in your field are actually shortlisting on Naukri today. Not guesswork.
+             We see how 1,20,000+ recruiters search, filter, and shortlist on Naukri every day. Our experts rebuild your resume on that data — not templates, not guesswork.
             </p>
           </m.div>
 

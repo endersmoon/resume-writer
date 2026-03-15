@@ -19,16 +19,16 @@ function App() {
     <LazyMotion features={domAnimation} strict>
       <main>
         <Hero />
-        <MeetOurExperts />
         <Suspense fallback={null}>
           <SocialProof />
           <TheGap />
           <ResumeComparison />
           <BeforeAfter />
+          <MeetOurExperts />
           <HowItWorks />
-          <WhyNaukri />
-          <Pricing />
           <Testimonials />
+          <Pricing />
+          <WhyNaukri />
           <Faq />
           <Footer />
         </Suspense>

@@ -291,11 +291,12 @@ export default function ResumeComparison() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
         >
+          <p className="text-xs uppercase tracking-widest text-gray-400 mb-3">See the difference</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-            Your resume isn't the problem. The way it's written is.
+            Same career. Completely different resume.
           </h2>
-          <p className="mt-3 text-sm text-gray-500">
-            Here's what recruiters on Naukri are actually scanning for — and why most resumes never make it through.
+          <p className="mt-3 text-sm text-gray-500 max-w-xl mx-auto">
+            Drag to compare what recruiters see before and after a Naukri Expert rebuild — for your exact role.
           </p>
         </m.div>
 
