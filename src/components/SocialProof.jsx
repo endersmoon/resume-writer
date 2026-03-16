@@ -12,7 +12,7 @@ const stats = [
     source: "Naukri Internal Analytics, 2024",
   },
   {
-    value: "72h",
+    value: "7 Days",
     label: "From expert call to your inbox. Editable. Formatted. Ready to send.",
     source: "Median delivery time",
   },

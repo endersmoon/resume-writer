@@ -23,8 +23,8 @@ function App() {
           
           <TheGap />
           <ResumeComparison />
-          <BeforeAfter />
-          <MeetOurExperts />
+          
+          
           <SocialProof />
           <HowItWorks />
           <Testimonials />

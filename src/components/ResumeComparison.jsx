@@ -76,43 +76,7 @@ const comparisons = [
       note: "When a Sales profile shows what the territory became — not just what was hit — it moves to the top of the list.",
     },
   },
-  {
-    id: "product-manager",
-    role: "Product Manager",
-    left: [
-      {
-        bullet: "Worked on product roadmap and features",
-        note: "Every PM works on a roadmap. What did you decide, and what happened?",
-      },
-      {
-        bullet: "Improved user engagement metrics",
-        note: "Vague metrics signal a lack of ownership over the outcome.",
-      },
-      {
-        bullet: "Collaborated with engineering and design",
-        note: "Listing collaboration as an achievement signals a junior profile.",
-      },
-    ],
-    right: {
-      bullets: [
-        {
-          text: "Owned end-to-end roadmap for checkout flow — shipped 3 features that reduced drop-off by 34%",
-          signal: "End-to-end ownership + conversion impact",
-        },
-        {
-          text: "Prioritized cancellation of 2 mid-flight features in Q3 to unblock ₹6Cr revenue initiative",
-          signal: "Strategic trade-off + business consequence",
-        },
-        {
-          text: "Set OKRs for cross-functional squad of 18; DAU grew from 1.2M to 2.1M over 2 quarters",
-          signal: "Leadership scope + growth metric",
-        },
-      ],
-      stat: "2.9×",
-      statLabel: "shortlist rate",
-      note: "A PM resume that shows what was killed — not just shipped — signals strategic thinking immediately.",
-    },
-  },
+ 
   {
     id: "finance-manager",
     role: "Finance Manager",

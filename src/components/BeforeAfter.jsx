@@ -31,33 +31,14 @@ const differentiators = [
 export default function BeforeAfter() {
   return (
     <section className="bg-slate-50 py-16 sm:py-24 px-4">
+       <h2 className="text-4xl sm:text-5xl max-w-4xl mx-auto mb-12  text-center font-bold text-slate-900 tracking-tight">
+            Only Naukri Resume Experts know what happens on the recruiter's side
+          </h2> 
+         
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="">
 
-          {/* Left column */}
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-xs font-semibold tracking-widest text-primary uppercase mb-4">
-              The Naukri advantage
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight leading-tight mb-6">
-              The only resume service with{" "}
-              <em className="not-italic text-primary">recruiter-side data.</em>
-            </h2>
-            <p className="text-gray-500 leading-relaxed">
-              Every day, over 1,20,000 recruiters search, filter, and shortlist on Naukri.
-              We see what they search for, which profiles they open, and what makes them
-              reach out. No freelancer, no AI tool, no other service has access to this.
-            </p>
-            <p className="text-gray-500 leading-relaxed mt-4">
-              Your expert brings that data directly into your resume — rewriting every line
-              around what actually gets shortlisted in your field.
-            </p>
-          </m.div>
+         
 
           {/* Right column */}
           <m.div

@@ -40,19 +40,19 @@ export default function Hero() {
             animate="visible"
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/3 border border-white/8 mb-8 md:mb-12"
           >
-            <Circle className="h-2 w-2 fill-emerald-500/80" />
-            <span className="text-xl text-white/90 tracking-wide">Built on what recruiters actually shortlist on Naukri</span>
+            <Circle className="h-2 w-2 fill-emerald-500/80 hidden sm:block" />
+            <span className="text-lg sm:text-xl text-white/90 tracking-wide">Expert led resume rebuild</span>
           </m.div>
 
           {/* Headline */}
           <m.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
+            <h1 className="text-4xl sm:text-7xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
               <span className="bg-clip-text text-transparent bg-linear-to-b from-white to-white/80">
-                Recruiters decide in 6 seconds.
+                Get your resume
               </span>
               <br />
               <SparklesText
-                text="Is your resume ready?"
+                text="Rebuilt by Naukri Experts"
                 textClassName="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 via-white/90 to-rose-300"
               />
             </h1>
@@ -60,18 +60,24 @@ export default function Hero() {
 
           {/* Subheadline */}
           <m.div custom={2} variants={fadeUpVariants} initial="hidden" animate="visible">
-            <p className="text-base sm:text-lg text-white/60 mb-10 leading-relaxed max-w-2xl mx-auto">
-             We see how 1,20,000+ recruiters search, filter, and shortlist on Naukri every day. Our experts rebuild your resume on that data — not templates, not guesswork.
+            <p className="text-base sm:text-xl text-white/80 mb-10 leading-relaxed max-w-2xl mx-auto">
+             Built on what recruiters in your field are actually shortlisting on Naukri today. No guesswork. No generic advice.
             </p>
           </m.div>
 
           {/* CTA */}
-          <m.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible">
+          <m.div custom={3} variants={fadeUpVariants} initial="hidden" animate="visible" className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#"
               className="inline-block px-6 py-4 rounded-full bg-white text-black font-semibold text-xl tracking-wide hover:bg-white/90 transition-colors"
             >
-              Rebuild My Resume →
+              Rebuild My Resume
+            </a>
+            <a
+              href="#pricing"
+              className="inline-block px-6 py-4 rounded-full border border-white/20 text-white font-semibold text-xl tracking-wide hover:bg-white/10 transition-colors"
+            >
+              View Pricing
             </a>
           </m.div>
 

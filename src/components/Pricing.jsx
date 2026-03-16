@@ -35,7 +35,7 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <section className="bg-slate-50 py-16 sm:py-20 px-4 sm:px-8 lg:px-16">
+    <section id="pricing" className="bg-slate-50 py-16 sm:py-20 px-4 sm:px-8 lg:px-16">
       <div className="max-w-6xl mx-auto">
         <div className="relative rounded-[2.5rem] overflow-hidden">
           {/* Background image */}
