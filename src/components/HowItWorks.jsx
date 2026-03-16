@@ -1,28 +1,23 @@
 import { m } from "framer-motion";
-import { UserCheck, Phone, FileEdit, RefreshCw } from "lucide-react";
 
 const steps = [
   {
-    number: "1",
-    icon: UserCheck,
+    image: "/one.png",
     title: "We match you with your expert",
     description: "Based on your Naukri profile, we pair you with someone who's rebuilt hundreds of resumes in your exact field and level.",
   },
   {
-    number: "2",
-    icon: Phone,
+    image: "/two.png",
     title: "A real conversation, not a form",
     description: "Your expert calls you — asks questions you haven't thought of, pulls out career details you'd normally leave out.",
   },
   {
-    number: "3",
-    icon: FileEdit,
+    image: "/three.png",
     title: "Your resume, rebuilt from scratch",
     description: "Within 72 hours, you get a resume structured around what recruiters in your field actually shortlist. Not edited — rebuilt.",
   },
   {
-    number: "4",
-    icon: RefreshCw,
+    image: "/four.png",
     title: "Refine until it feels right",
     description: "Unlimited revisions. If your expert isn't the right fit, we assign a new one. If you're still not happy — full refund.",
   },
@@ -62,7 +57,6 @@ export default function HowItWorks() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {steps.map((step, i) => {
-            const Icon = step.icon;
             return (
               <m.div
                 key={i}
@@ -72,19 +66,9 @@ export default function HowItWorks() {
                 }}
                 className="flex flex-col items-center text-center gap-4"
               >
-                {/* Number + Icon stacked */}
-                <div className="relative flex items-center justify-center w-full h-44">
-                  {/* Large ghost number */}
-                  <span
-                    className="absolute font-bold text-[10rem] text-black leading-none select-none pointer-events-none"
-                    style={{ opacity: 0.08, left: 0, top: "50%", transform: "translateY(-50%)" }}
-                  >
-                    {step.number}
-                  </span>
-                  {/* Icon box */}
-                  <div className="relative z-10 flex items-center justify-center w-36 h-36 rounded-2xl bg-gray-100">
-                    <Icon className="w-14 h-14 text-gray-400" />
-                  </div>
+                {/* Image */}
+                <div className="flex items-center justify-center w-36 h-36 rounded-2xl overflow-hidden">
+                  <img src={step.image} alt={step.title} className="w-full h-full object-cover" />
                 </div>
 
                 {/* Text */}

@@ -1,5 +1,7 @@
 import { m } from "framer-motion";
 
+const BG_IMAGE = "https://www.figma.com/api/mcp/asset/0aa6de68-34b6-45f0-9227-fb32acd1f383";
+
 const tiers = [
   {
     name: "Entry Level",
@@ -33,85 +35,88 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <section className="bg-slate-50 py-16 sm:py-24 px-4">
+    <section className="bg-slate-50 py-16 sm:py-20 px-4 sm:px-8 lg:px-16">
       <div className="max-w-6xl mx-auto">
+        <div className="relative rounded-[2.5rem] overflow-hidden">
+          {/* Background image */}
+          <img
+            alt=""
+            src={BG_IMAGE}
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          />
+          {/* Dark overlay — dense at top, fades toward bottom */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.536) 35%, rgba(0,0,0,0) 74.5%)",
+            }}
+          />
 
-        {/* Heading */}
-        <m.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight">
-            Simple, transparent pricing.
-          </h2>
-          <p className="mt-3 text-base text-gray-500">
-            Pricing is based on your experience level. One time payment. No subscription.
-          </p>
-        </m.div>
+          {/* Content */}
+          <div className="relative px-8 sm:px-16 py-16 sm:py-20 flex flex-col items-center gap-10">
+            {/* Heading */}
+            <m.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
+            >
+              <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
+                Simple, transparent pricing.
+              </h2>
+              <p className="mt-3 text-base text-white/80">
+                Every plan includes a dedicated expert, unlimited revisions, and a full refund guarantee.
+              </p>
+            </m.div>
 
-        {/* Cards grid */}
-        <m.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
-          }}
-          className="border border-gray-200 rounded-2xl overflow-hidden bg-white"
-        >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {tiers.map((tier) => (
-              <m.div
-                key={tier.name}
-                variants={{
-                  hidden: { opacity: 0, y: 24 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
-                }}
-                className="group/feature relative flex flex-col p-8 border-r border-b border-gray-200 cursor-default"
-              >
-                {/* Hover gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-100 to-transparent opacity-0 group-hover/feature:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            {/* Cards */}
+            <m.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                hidden: {},
+                visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+              }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full"
+            >
+              {tiers.map((tier) => (
+                <m.div
+                  key={tier.name}
+                  variants={{
+                    hidden: { opacity: 0, y: 24 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+                  }}
+                  className="bg-white rounded-2xl p-6 shadow-[0px_3px_92px_0px_rgba(0,0,0,0.08)] flex flex-col"
+                >
+                  <p className="font-bold text-base text-[#101828]">{tier.name}</p>
+                  <p className="text-xs text-[#6a7282] mt-0.5 mb-7">{tier.range}</p>
 
-                {/* Left accent bar */}
-                <div className="absolute left-0 top-0 w-0.5 h-0 bg-primary group-hover/feature:h-full transition-all duration-300" />
-
-                <div className="relative flex flex-col flex-1">
-                  {/* Tier name + range */}
-                  <p className="font-semibold text-gray-900 mb-1 transition-transform duration-200 group-hover/feature:translate-x-1">
-                    {tier.name}
-                  </p>
-                  <p className="text-xs text-gray-500 mb-6">{tier.range}</p>
-
-                  {/* Price */}
                   <div className="mt-auto">
-                    <p className="text-2xl font-bold text-gray-900 tracking-tight">{tier.price}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">
-                      <s>{tier.original}</s>
-                      <span className="ml-2 text-primary font-medium">Save {tier.savings}</span>
-                    </p>
-
+                    <p className="text-lg font-bold text-[#101828] tracking-tight">{tier.price}</p>
+                    <div className="flex items-center gap-1.5 mt-0.5 mb-4 text-xs">
+                      <s className="text-[#99a1af]">{tier.original}</s>
+                      <span className="text-primary font-medium">Save {tier.savings}</span>
+                    </div>
                     <a
                       href="#"
-                      className="mt-5 block w-full text-center rounded-full bg-primary text-white py-2 text-sm font-semibold hover:opacity-90 transition-opacity"
+                      className="block w-full text-center rounded-full bg-primary text-white py-2 text-sm font-bold hover:opacity-90 transition-opacity"
                     >
-                      Get Started — ₹{tier.price.replace("₹", "")}
+                      Get Started
                     </a>
                   </div>
-                </div>
-              </m.div>
-            ))}
+                </m.div>
+              ))}
+            </m.div>
+
+            {/* Footer note */}
+            <p className="text-xs font-black text-white text-center">
+              Not happy with your expert? We&apos;ll assign a new one — or refund you. No hoops.
+            </p>
           </div>
-        </m.div>
-
-        {/* Footer note */}
-        <p className="mt-6 text-center text-xs text-gray-400">
-          Full refund guarantee. Unlimited revisions. Refund if your expert doesn't reach out in 7 days — no questions asked.
-        </p>
-
+        </div>
       </div>
     </section>
   );
