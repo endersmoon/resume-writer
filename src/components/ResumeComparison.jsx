@@ -220,7 +220,7 @@ function ComparisonPanel({ data }) {
 
 export default function ResumeComparison() {
   return (
-    <section className="bg-white py-20 sm:py-32 px-5 md:px-10">
+    <section className="bg-white py-20 sm:py-16 px-5 md:px-10">
       <div className="max-w-5xl mx-auto">
 
         <m.div
@@ -231,10 +231,10 @@ export default function ResumeComparison() {
           className="text-center mb-12 sm:mb-16"
         >
           <p className="text-xs uppercase tracking-widest text-gray-400 mb-3">Role-by-role breakdown</p>
-          <h2 className="font-bold text-gray-950 text-4xl sm:text-5xl tracking-tight leading-tight max-w-3xl mx-auto">
+          <h2 className="font-bold text-gray-950 text-4xl sm:text-5xl tracking-tight text-center leading-tight max-w-5xl mx-auto">
             Same career. Completely different resume.
           </h2>
-          <p className="mt-4 text-gray-500 text-base sm:text-lg max-w-xl mx-auto">
+          <p className="mt-3 text-gray-500 text-base sm:text-lg max-w-3xl mx-auto text-center">
             Pick your role and see exactly what recruiters skip — and what they stop for.
           </p>
         </m.div>

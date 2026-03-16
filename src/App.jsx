@@ -20,11 +20,12 @@ function App() {
       <main>
         <Hero />
         <Suspense fallback={null}>
-          <SocialProof />
+          
           <TheGap />
           <ResumeComparison />
           <BeforeAfter />
           <MeetOurExperts />
+          <SocialProof />
           <HowItWorks />
           <Testimonials />
           <Pricing />

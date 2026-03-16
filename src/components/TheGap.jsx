@@ -45,7 +45,7 @@ const itemVariants = {
 
 export default function TheGap() {
   return (
-    <section className="bg-slate-50 py-20 sm:py-32 px-5 md:px-10">
+    <section className="bg-slate-50 py-20 sm:py-16 px-5 md:px-10">
       <div className="max-w-5xl mx-auto">
 
         {/* Heading */}
