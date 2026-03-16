@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const tiers = [
   { name: 'Entry Level',  label: '0–3 years',  price: '₹2,204', original: '₹2,754', savings: '₹550' },
@@ -10,6 +10,18 @@ const tiers = [
 export default function StickyBar() {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const hero = document.querySelector('main > section:first-child');
+    if (!hero) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(!entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
 
   const selectedTier = selected !== null ? tiers[selected] : null;
 
@@ -17,6 +29,8 @@ export default function StickyBar() {
     setSelected(i);
     setOpen(false);
   }
+
+  if (!visible) return null;
 
   return (
     <>
