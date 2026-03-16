@@ -30,7 +30,7 @@ const reasons = [
 
 export default function WhyNaukri() {
   return (
-    <section className="bg-white py-16 sm:py-24 px-4">
+    <section id="features" className="bg-white py-16 sm:py-24 px-4">
       <div className="max-w-5xl mx-auto">
 
         {/* Heading */}

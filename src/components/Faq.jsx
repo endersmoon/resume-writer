@@ -96,7 +96,7 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="bg-slate-50 py-16 sm:py-24 px-4">
+    <section id="faqs" className="bg-slate-50 py-16 sm:py-24 px-4">
       <div className="max-w-3xl mx-auto">
 
         {/* Heading */}

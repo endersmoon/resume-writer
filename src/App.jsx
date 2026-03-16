@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { LazyMotion, domAnimation } from 'framer-motion';
 import Hero from './components/Hero';
 import MeetOurExperts from './components/MeetOurExperts';
+import Navbar from './components/Navbar';
 import StickyBar from './components/StickyBar';
 
 const SocialProof = lazy(() => import('./components/SocialProof'));
@@ -18,6 +19,7 @@ const Footer = lazy(() => import('./components/Footer'));
 function App() {
   return (
     <LazyMotion features={domAnimation} strict>
+      <Navbar />
       <main>
         <Hero />
         <Suspense fallback={null}>

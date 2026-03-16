@@ -17,18 +17,6 @@ export default function Hero() {
     <section className="relative min-h-[85vh] w-full flex items-center justify-center overflow-hidden bg-black">
       <ShaderAnimation />
 
-      <div className="absolute top-6 left-6 z-20">
-        <img
-          src="/naukri_logo.svg"
-          alt="Naukri"
-          className="h-8 w-auto opacity-90"
-          fetchPriority="high"
-          decoding="sync"
-          width="120"
-          height="32"
-        />
-      </div>
-
       <div className="relative z-10 container mx-auto px-4 md:px-6">
         <div className="max-w-5xl mx-auto text-center">
 
